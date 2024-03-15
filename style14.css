@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: hsl(222, 26%, 31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+.switch {
+  --button-width: 80px;
+  --button-height: 25px;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc(
+    (var(--button-height) - var(--toggle-diameter)) / 2
+  );
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+}
+.slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+.slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+.switch input[type="checkbox"]:checked + .slider {
+  background-color: red;
+}
+.switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)
+    )
+  );
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+.switch input[type="checkbox"] {
+  display: none;
+}
+.switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+}
+.switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
+    )
+  );
+  background-color: #4296f4;
+}
+section {
+  width: 440px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.divUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.partRight {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.witchandp {
+  display: flex;
+  flex-direction: column;
+}
+.pofswitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+input {
+  background-color: hsl(223, 31%, 20%);
+  height: 15vh;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+.partbutton {
+  background-color: hsl(223, 31%, 20%);
+  width: 400px;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  grid-template-columns: repeat(4, 21.5%);
+  grid-template-rows: repeat(5, 50px);
+}
+#Reset {
+  color: white;
+  grid-column: span 2;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 2px 2px 0px 0px hsl(225, 21%, 49%);
+}
+#equals {
+  grid-column: span 2;
+  color: white;
+  font-size: 25px;
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 2px 2px 0px 0px hsl(6, 63%, 50%);
+}
+.item {
+  color: hsl(224, 28%, 35%);
+  border: none;
+  font-size: 25px;
+  box-shadow: 2px 2px 0px 0px hsl(30, 25%, 89%);
+  border-radius: 10px;
+  background-color: hsl(30, 25%, 89%);
+}
+.item:nth-child(4) {
+  color: white;
+  font-size: 25px;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 2px 2px 0px 0px hsl(225, 21%, 49%);
+}

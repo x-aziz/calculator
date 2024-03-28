@@ -140,3 +140,21 @@ input {
   background-color: hsl(225, 21%, 49%);
   box-shadow: 2px 2px 0px 0px hsl(225, 21%, 49%);
 }
+
+@media screen and (max-width: 375px) {
+  .calculator {
+    width: 100%;
+  }
+  .divUp {
+    margin: 0px 30px;
+  }
+  input {
+    width: 314px;
+    margin-left: 25px;
+  }
+  .partbutton {
+    margin-left: 25px;
+    width: 280px;
+    grid-template-columns: repeat(4, 19.5%);
+  }
+}

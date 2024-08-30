@@ -97,11 +97,15 @@ section {
   justify-content: space-around;
 }
 input {
+  font-weight: bolder;
+  font-size: 60px;
+  color: white;
   background-color: hsl(223, 31%, 20%);
   height: 15vh;
   border-radius: 8px;
   border: none;
   width: 100%;
+
 }
 .partbutton {
   background-color: hsl(223, 31%, 20%);
@@ -129,8 +133,8 @@ input {
 .item {
   color: hsl(224, 28%, 35%);
   border: none;
+  cursor: pointer;
   font-size: 25px;
-  box-shadow: 2px 2px 0px 0px hsl(30, 25%, 89%);
   border-radius: 10px;
   background-color: hsl(30, 25%, 89%);
 }

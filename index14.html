@@ -25,27 +25,28 @@
           </div>
         </div>
       </div>
-      <input type="text" class="inputside" />
-      <div class="partbutton">
-        <button class="item"><b>7</b></button>
-        <button class="item"><b>8</b></button>
-        <button class="item"><b>9</b></button>
-        <button class="item"><b>DEL</b></button>
-        <button class="item"><b>4</b></button>
-        <button class="item"><b>5</b></button>
-        <button class="item"><b>6</b></button>
-        <button class="item"><b>+</b></button>
-        <button class="item"><b>1</b></button>
-        <button class="item"><b>2</b></button>
-        <button class="item"><b>3</b></button>
-        <button class="item"><b>-</b></button>
-        <button class="item"><b>.</b></button>
-        <button class="item"><b>0</b></button>
-        <button class="item"><b>/</b></button>
-        <button class="item"><b>&#215;</b></button>
-        <button class="item" id="Reset"><b>RESET</b></button>
-        <button class="item" id="equals"><b>=</b></button>
+      <input type="text" class="inputside" id="calculatorInput" readonly/>
+      <div class="partbutton" id="buttons">
+        <button class="item" onclick="addToInput('7')"><b>7</b></button>
+        <button class="item" onclick="addToInput('8')"><b>8</b></button>
+        <button class="item" onclick="addToInput('9')"><b>9</b></button>
+        <button class="item" onclick="deleteLast()"><b>DEL</b></button>
+        <button class="item" onclick="addToInput('4')"><b>4</b></button>
+        <button class="item" onclick="addToInput('5')"><b>5</b></button>
+        <button class="item" onclick="addToInput('6')"><b>6</b></button>
+        <button class="item" onclick="addToInput('+')"><b>+</b></button>
+        <button class="item" onclick="addToInput('1')"><b>1</b></button>
+        <button class="item" onclick="addToInput('2')"><b>2</b></button>
+        <button class="item" onclick="addToInput('3')"><b>3</b></button>
+        <button class="item" onclick="addToInput('-')"><b>-</b></button>
+        <button class="item" onclick="addToInput('.')"><b>.</b></button>
+        <button class="item" onclick="addToInput('0')"><b>0</b></button>
+        <button class="item" onclick="addToInput('/')"><b>/</b></button>
+        <button class="item" onclick="addToInput('*')"><b>&#215;</b></button>
+        <button class="item" id="Reset" onclick="resetCalculator()"><b>RESET</b></button>
+        <button class="item" id="equals" onclick="calculate()"><b>=</b></button>
       </div>
     </section>
+    <script src="index14.js"></script>
   </body>
 </html>
